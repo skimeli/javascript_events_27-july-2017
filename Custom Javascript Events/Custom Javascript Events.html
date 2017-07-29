@@ -1,0 +1,40 @@
+<html>
+   <head>
+   
+      <script type="text/javascript">
+     
+		 
+
+//javascript custom event
+
+function validateForm()
+{
+    var msg = document.getElementById("msg").value.trim();
+	// Validate Title
+    //var title = $("#frtitle").val();
+    if (msg=="" || msg==null) { 
+	  alert("Please enter only alphanumeric values for your your message content");
+	} 
+	else {
+     alert(msg); 
+    }
+	
+}
+
+
+      </script>
+      
+   </head>
+   <body>
+  
+		 <h1>Custom Javascript Events</h1>
+		<form id="msgbox" method="post" onsubmit="return validateForm();">
+				<label for="msg">your message</label>
+				<input id="msg" value="" />
+				<button>Trigger Custom Event</button>
+		</form>
+	<hr>
+	/form>
+	<hr>
+   </body>
+</html>

@@ -1,0 +1,60 @@
+Javascript Dynamic Typing<html>
+   <head>
+   
+      <script type="text/javascript">
+        
+function JSPromisesFunction()
+{
+    //javascript promises
+var isMomHappy = document.getElementById("isMomHappyVal").checked;
+
+// Promise
+var willIGetNewPhone = new Promise(
+    function (resolve, reject) {
+        if (isMomHappy) {
+            var phone = {
+                brand: 'Samsung',
+                color: 'black'
+            };
+            resolve(phone);
+        } else {
+            var reason = new Error('mom is not happy');
+            reject(reason);
+        }
+
+    }
+);
+
+
+
+var askMom = function () {
+    willIGetNewPhone
+        .then(function (fulfilled) {
+            // yay, you got a new phone
+            alert('Javascript Promises ' +fulfilled.brand +' '+fulfilled.color);
+        })
+        .catch(function (error) {
+            // ops, mom don't buy it
+            alert(error.message);
+        });
+}
+
+askMom();
+	
+}
+
+      </script>
+      
+   </head>
+   <body>
+    
+	
+	 <h3>Javascript Promises</h3>
+		<form id="JSPromises" method="post" onsubmit="return JSPromisesFunction();">
+			<label for="isMomHappyVal">Will You buy Your Mum a Gift? </label>
+			<input type="checkbox" id="isMomHappyVal" />
+			<button>JS Promises</button>
+		</form>
+	<hr>
+   </body>
+</html>

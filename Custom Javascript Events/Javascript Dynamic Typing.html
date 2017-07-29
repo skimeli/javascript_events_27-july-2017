@@ -1,0 +1,46 @@
+Javascript Dynamic Typing<html>
+   <head>
+   
+      <script type="text/javascript">
+
+}
+//javascript dynamic typing
+
+  function handle(e){
+        if(e.keyCode == 13)
+{
+var value = document.getElementById("txt").value;
+
+			var typeofv=typeof value;
+			alert(typeofv);
+		
+			
+    return false; // returning false will prevent the event from bubbling up.
+}
+else
+{
+ 
+    return true;
+}
+    }
+
+	
+
+
+      </script>
+      
+   </head>
+   <body>
+     
+	<hr>
+	  <h3>Javascript Dynamic Typing</h3>
+	  <p> Type a Number, Text or a Boolean True/False below and hit enter
+	  </p>
+	 <form action="#">
+     <input type="text" name="txt" id="txt" onkeypress="return handle(event)" />
+</form
+	 
+
+	<hr>
+   </body>
+</html>
